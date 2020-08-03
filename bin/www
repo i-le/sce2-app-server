@@ -90,5 +90,5 @@ function onListening() {
     ? 'pipe ' + addr
     : 'port ' + addr.port;
   debug('Listening on ' + bind);
-  console.log('sever started: http://localhost:8080')
+  console.log(`sever started: ${port} ~!~!~`)
 }
