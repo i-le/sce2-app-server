@@ -12,7 +12,7 @@ mongoose.connect(process.env.MONGODB_URI, {
 .catch(error => console.log(error.message))
 
 
-//定义 schema （描述文档结构）
+//defind schema （描述文档结构）
 //schema 用于指定文档的结构： 属性名/属性只类型，是否必须，默认etc。
 const userSchema = new mongoose.Schema({
     username: {type: String, required: true},
