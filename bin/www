@@ -28,7 +28,9 @@ require('../socketIO/socketIO_server.js')(server)
  * Listen on provided port, on all network interfaces.
  */
 
-server.listen(process.env.PORT );
+server.listen(process.env.PORT, () => {
+  console.log(`server started on: ${process.env.PORT}`)
+});
 server.on('error', onError);
 server.on('listening', onListening);
 
@@ -90,5 +92,5 @@ function onListening() {
     ? 'pipe ' + addr
     : 'port ' + addr.port;
   debug('Listening on ' + bind);
-  console.log(`sever started: ${port} ~!~!~`)
+  // console.log(`sever started: ${port} ~!~!~`)
 }
