@@ -11,6 +11,7 @@ module.exports = function(server) {
         data.name = data.name.toUpperCase()
         // sending msg to client (users and data)
         // sending msg to current socket matchs current user；io.emit(): 发送给所有连接服务器的客户端
+          
         io.emit('receiveMsg', data.name + '-' + data.date)
         console.log('server is sending data to clinet', data)
       })
